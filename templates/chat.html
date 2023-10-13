@@ -24,11 +24,8 @@
     />
   </head>
   <body>
-    <a href="{{ url_for('notes') }}">Go to Notes</a>
-    <a href="{{ url_for('landing_page') }}">Login</a>
     <div class="ai-generator1">
       <img class="image-icon10" alt="" src="./public/image@2x.png" />
-
       <div class="ai-generator-item"></div>
       <div class="ai-generator-inner1">
         <div class="frame-parent10">
@@ -158,10 +155,10 @@
             <div class="create1">Create</div>
           </div>
           <div class="frame99">
-            <div class="create1">Ask</div>
+            <div href="{{ url_for('chat') }}"class="create1">Ask</div>
           </div>
           <div class="frame100">
-            <div class="create1">View</div>
+            <a href="{{ url_for('notes') }}" class="create1">View</a>
           </div>
         </div>
       </div>
