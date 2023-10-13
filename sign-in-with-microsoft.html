@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./sign-in-with-microsoft.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Turret Road:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Darker Grotesque:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sign-in-with-microsoft" id="signInWithMicrosoft">
+      <div class="sign-in-with">Sign in with Microsoft</div>
+      <div class="microsoft">
+        <div class="microsoft1">
+          <div class="yeloow"></div>
+          <div class="blue"></div>
+          <div class="green"></div>
+          <div class="red"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var signInWithMicrosoft = document.getElementById("signInWithMicrosoft");
+      if (signInWithMicrosoft) {
+        signInWithMicrosoft.addEventListener("click", function (e) {
+          window.location.href = "./ask.html";
+        });
+      }
+      </script>
+  </body>
+</html>

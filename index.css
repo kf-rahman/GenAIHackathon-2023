@@ -1,0 +1,87 @@
+.app-service-domains,
+.user-icon {
+  position: absolute;
+  top: 190px;
+  left: 166px;
+  width: 125px;
+  height: 125px;
+}
+.app-service-domains {
+  left: 484px;
+  overflow: hidden;
+}
+.ebooks-icon,
+.general-storage-icon {
+  position: absolute;
+  top: 190px;
+  left: 1367px;
+  width: 125px;
+  height: 125px;
+}
+.ebooks-icon {
+  top: 812px;
+  left: 1052px;
+}
+.code-icon,
+.internet-icon,
+.web-icon {
+  position: absolute;
+  top: 669px;
+  left: 1213px;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}
+.internet-icon,
+.web-icon {
+  top: 696px;
+  left: 932px;
+}
+.internet-icon {
+  top: 286px;
+  left: 1028px;
+}
+.azure-search-icon,
+.cognitive-services-icon {
+  position: absolute;
+  top: 297px;
+  left: 799px;
+  width: 125px;
+  height: 73.95px;
+}
+.azure-search-icon {
+  top: 80px;
+  left: 1046px;
+  height: 125px;
+  overflow: hidden;
+}
+.image-14-icon {
+  position: absolute;
+  top: 533px;
+  left: 1052px;
+  width: 117px;
+  height: 90px;
+  object-fit: cover;
+}
+.app-services-icon {
+  position: absolute;
+  top: 80px;
+  left: 760px;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+}
+.azure-database-generic {
+  position: absolute;
+  top: 181px;
+  left: 1552px;
+  width: 125px;
+  height: 125px;
+}
+.user-icon-parent {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1156px;
+  overflow: hidden;
+}

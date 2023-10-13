@@ -1,0 +1,9 @@
+.image-9 {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  background-image: url(./public/image-9@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
