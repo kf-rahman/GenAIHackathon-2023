@@ -3,8 +3,16 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def landing_page():
+    return render_template('landing_page.html')
 
-if __name__ == '__main__':
+
+@app.route('/notes')
+def notes():
+    return render_template('notes.html')
+
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
+if __name__ == "__main__":
     app.run(debug=True)
