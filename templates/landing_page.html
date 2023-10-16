@@ -24,12 +24,25 @@
     />
   </head>
   <body>
-    <div class="ai-generator">
-      <img class="image-icon9" alt="" src="./public/image@2x.png" />
-      <div class="ai-generator-child"></div>
-      <div class="ai-generator-inner">
-        <div class="image-13-parent">
-          <img class="image-13-icon" alt="" src="./public/image-13@2x.png" />
+    <header>
+      <nav>
+        <div class="full-logo">
+          <a href="#" id="logo">SecondBrain</a>
+          <b class="secondbrain1">SecondBrain</b>
+        </div>
+          <ul>
+              <li>
+                  <a href="#working">Sign Up</a>
+              </li>
+              <li>
+                  <a href="#germany">Log In</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+    <div class="main-container">
+        <div class="full-single-column">
+          <img id="big-logo" alt="" src="{{url_for('static', filename='BrainBrain.png')}}" />
 
           <div class="unleash-your-minds-potential-wrapper">
             <div class="unleash-your-minds-container">
@@ -38,38 +51,17 @@
               <span>: Your AI-Powered Note-Taking Companion!</span>
             </div>
           </div>
-          <div class="frame-parent9">
-            <div class="frame78">
+          <div class="login-buttons">
+            <a href="#" id="login-button">
               <div class="sign-in-with">Sign in with Microsoft</div>
-              <div class="microsoft">
-                <div class="microsoft1">
-                  <div class="yeloow"></div>
-                  <div class="blue"></div>
-                  <div class="green"></div>
-                  <div class="red"></div>
-                </div>
-              </div>
-            </div>
-            <div class="frame78">
+              <img class="co-logo" src="https://img.icons8.com/color/48/microsoft.png" alt="microsoft" />
+            </a>
+            <a href="#" id="login-button">
               <div class="sign-in-with">Sign in with Google</div>
-              <img class="microsoft" alt="" src="./public/google.svg" />
-            </div>
+              <img class="co-logo" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" />
+            </a>
           </div>
         </div>
       </div>
-      <div class="image-11-group">
-        <img class="image-11-icon1" alt="" src="./public/image-11@2x.png" />
-
-        <b class="secondbrain1">SecondBrain</b>
-        <div class="frame80">
-          <button class="frame81">
-            <div class="sign-up">Sign Up</div>
-          </button>
-          <button class="frame82">
-            <div class="sign-up">Log In</div>
-          </button>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

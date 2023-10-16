@@ -1,30 +1,77 @@
-.image-icon9 {
-  position: absolute;
-  width: 120.83%;
-  top: 916px;
-  right: -20.83%;
-  left: 0;
-  max-width: 100%;
+header {
+  top: 0px;
+  position: fixed;
+  overflow: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 100px;
   overflow: hidden;
-  height: 1690px;
-  object-fit: cover;
-}
-.ai-generator-child {
-  position: absolute;
-  top: -178px;
-  left: -128px;
-  border-radius: 50%;
-  background-color: var(--color-blueviolet);
-  filter: blur(349px);
-  width: 457px;
-  height: 457px;
-}
-.image-13-icon {
+  z-index: 3; }
+#logo {
+  float: left;
+  width: 100px;
+  height: 70px;
+  background-image: url("BrainBrain.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-indent: -9999px;
   position: relative;
-  width: 473px;
-  height: 351px;
-  object-fit: cover;
-}
+  z-index: 2;
+  -webkit-transition: opacity 0.41s linear;
+  -moz-transition: opacity 0.41s linear;
+  -o-transition: opacity 0.41s linear;
+  transition: opacity 0.41s linear; }
+  
+  #logo:hover {
+  background-image: url("BrainBrain.png"), radial-gradient( rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
+  background-position: left bottom;
+  background-repeat: no-repeat;}
+
+header nav ul {
+  z-index: 2;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  top: 0px;
+  right: 5%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  text-align: right; }
+  
+  header nav ul li {
+    display: inline;
+    padding: 0; }
+    
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-family: DINWebPro-Bold;
+      text-transform: uppercase;
+      font-size: 1.4375em;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      position: relative;
+      margin-left: 20px;
+      font-weight: normal;
+      -webkit-transition: color 1s;
+      -moz-transition: color 1s;
+      -o-transition: color 1s;
+      transition: color 1s; }
+      
+      header nav ul li a:hover {
+        color: #d99e00; }
+      
+      header nav ul li a.active {
+        color: #d99e00; }
+
 .second-brain {
   background: linear-gradient(
     89.95deg,
@@ -60,62 +107,79 @@
   width: 220px;
   flex-shrink: 0;
 }
-.blue,
-.green,
-.red,
-.yeloow {
-  position: absolute;
-  height: 45.45%;
-  width: 45.45%;
-  top: 54.55%;
-  right: 0;
-  bottom: 0;
-  left: 54.55%;
-  background-color: #feba08;
-}
-.blue,
-.green,
-.red {
-  right: 54.55%;
-  left: 0;
-  background-color: #05a6f0;
-}
-.green,
-.red {
-  top: 0;
-  right: 0;
-  bottom: 54.55%;
-  left: 54.55%;
-  background-color: #80bc06;
-}
-.red {
-  right: 54.55%;
-  left: 0;
-  background-color: #f25325;
-}
-.microsoft1 {
-  position: absolute;
-  height: 68.75%;
-  width: 68.75%;
-  top: 15.63%;
-  right: 15.63%;
-  bottom: 15.63%;
-  left: 15.63%;
-}
-.frame78,
-.microsoft {
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.microsoft {
+
+.co-logo {
   position: relative;
   width: 32px;
   height: 32px;
 }
-.frame78 {
+
+.secondbrain1 {
+  color: white;
+  position: relative;
+  display: inline-block;
+  width: 216px;
+  flex-shrink: 0;
+  font-size: var(--font-size-17xl);
+  font-family: var(--font-turret-road);
+  left: 5%;
+}
+
+.main-container {
+  position: relative;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 65px;
+  color: var(--color-white);
+  font-family: var(--font-darker-grotesque);
+}
+.full-logo {
+  left: 5%;
+  float: left;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+}
+.full-single-column {
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  height: 902px;
+  gap: 60px;
+}
+#big-logo {
+  position: relative;
+  width: 473px;
+  height: 351px;
+  object-fit: cover;
+}
+#big-logo:hover {
+  background-image: url("BrainBrain.png"), radial-gradient( rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
+  background-position: left bottom;
+  background-repeat: no-repeat;}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-work-sans);
+}
+#login-button {
   border-radius: var(--br-781xl);
-  background-color: var(--color-gray-800);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
   width: 350px;
   height: 60px;
   display: flex;
@@ -125,99 +189,13 @@
   padding: var(--padding-smi) 0;
   box-sizing: border-box;
   gap: var(--gap-3xs);
-}
-.frame-parent9 {
-  align-self: stretch;
-  gap: var(--gap-xl);
   font-size: var(--font-size-xl);
   font-family: var(--font-work-sans);
-}
-.ai-generator-inner,
-.frame-parent9,
-.image-13-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-.image-13-parent {
-  align-self: stretch;
-  height: 902px;
-  gap: 60px;
-}
-.ai-generator-inner {
-  position: absolute;
-  top: 163px;
-  left: -1px;
-  width: 1440px;
-}
-.image-11-icon1 {
-  position: relative;
-  width: 53px;
-  height: 56px;
-  object-fit: cover;
-}
-.secondbrain1 {
-  position: relative;
-  display: inline-block;
-  width: 216px;
-  flex-shrink: 0;
-}
-.sign-up {
-  position: relative;
-  line-height: 27.3px;
-}
-.frame81,
-.frame82 {
-  border-bottom: 1.5px solid var(--color-gray-1100);
-  box-sizing: border-box;
-  width: 75px;
-  justify-content: center;
-  padding: 0 var(--padding-8xs);
-}
-.frame81 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.frame82 {
-  font-size: var(--font-size-lg);
-}
-.frame80,
-.frame82,
-.image-11-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.frame80 {
-  flex: 1;
-  justify-content: flex-end;
-  padding: 0 var(--padding-xl);
-  gap: var(--gap-xl);
-  text-align: center;
-  font-size: var(--font-size-mid);
-  font-family: var(--font-work-sans);
-}
-.image-11-group {
-  position: absolute;
-  top: 45px;
-  left: 23px;
-  width: 1405px;
-  justify-content: flex-start;
-  gap: var(--gap-3xs);
-  text-align: left;
-  font-size: var(--font-size-17xl);
-  font-family: var(--font-turret-road);
-}
-.ai-generator {
-  position: relative;
-  background-color: var(--color-black);
-  width: 100%;
-  height: 1116px;
   overflow: hidden;
-  text-align: center;
-  font-size: 65px;
+  flex-shrink: 0;
   color: var(--color-white);
-  font-family: var(--font-darker-grotesque);
+  text-decoration: none;
 }
+#login-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.25); }
