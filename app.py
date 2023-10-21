@@ -35,12 +35,14 @@ def chatbot_response(msg):
 def get_bot_response():
     userText = request.args.get('msg')
     print("is this coming here")
+
     generated_res = chatbot_response({
-    "inputs": userText
-})[0]['generated_text']
-)
+        "inputs": userText
+    })[0]['generated_text']
+    )
 
     return generated_res
+
 
 
 if __name__ == "__main__":
