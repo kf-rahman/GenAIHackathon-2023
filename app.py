@@ -1,6 +1,6 @@
 from urllib import request
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 
 import requests
 
@@ -31,17 +31,17 @@ def chatbot_response(msg):
     print(response.json())
     return response.json()
 
-@app.route("/poc", methods=["GET"])
+@app.route("/get", methods=["GET"])
 def get_bot_response():
     userText = request.args.get('msg')
-    print("is this coming here")
 
     generated_res = chatbot_response({
         "inputs": userText
-    })[0]['generated_text']
-    )
+    })
 
-    return generated_res
+    print('this is printed',generated_res[0]['generated_text'])
+
+    return generated_res[0]['generated_text']
 
 
 
