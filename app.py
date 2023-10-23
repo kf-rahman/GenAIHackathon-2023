@@ -42,9 +42,10 @@ def get_bot_response():
         "inputs": userText
     })
 
-    print('this is printed',generated_res[0]['generated_text'])
+    print('this is printed',generated_res)
 
     return generated_res[0]['generated_text']
+
 
 
 
