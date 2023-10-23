@@ -20,6 +20,9 @@ def landing_page():
 def notes():
     return render_template('notes.html')
 
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
 
 @app.route('/poc')
 def poc():
