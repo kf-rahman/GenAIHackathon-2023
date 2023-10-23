@@ -24,43 +24,54 @@
     />
   </head>
   <body>
-    <div class="ai-generator1">
-      <img class="image-icon10" alt="" src="./public/image@2x.png" />
-      <div class="ai-generator-item"></div>
-      <div class="ai-generator-inner1">
-        <div class="frame-parent10">
-          <div class="frame83">
-            <div class="rectangle43"></div>
-            <div class="frame-parent11">
-              <div class="frame84">
+    <header>
+      <nav>
+        <div class="full-logo">
+          <a href="/home" id="logo">SecondBrain</a>
+          <b class="secondbrain1">SecondBrain</b>
+        </div>
+          <ul>
+              <li>
+                  <a href="#working">Sign Up</a>
+              </li>
+              <li>
+                  <a href="#germany">LogIn</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+    <div class="main-container">
+        <div class="two-cols">
+          <div class="sidebar">
+            <div class="sidebar-inner">
+              <div class="new-chat-button">
                 <div class="new-chat">+ NEW CHAT</div>
               </div>
-              <div class="frame85">
-                <img class="frame-icon2" alt="" src="./public/frame2.svg" />
+              <div class="chat-select-button">
+                <img class="chat-icon" alt="" src="https://img.icons8.com/material-outlined/24/FFFFFF/chat.png" />
 
                 <div class="chat-title-1">Chat Title 1</div>
               </div>
-              <div class="frame85">
-                <img class="frame-icon2" alt="" src="./public/frame2.svg" />
+              <div class="chat-select-button">
+                <img class="chat-icon" alt="" src="https://img.icons8.com/material-outlined/24/FFFFFF/chat.png" />
 
                 <div class="chat-title-1">Chat Title 2</div>
               </div>
-              <div class="frame85">
-                <img class="frame-icon2" alt="" src="./public/frame2.svg" />
+              <div class="chat-select-button">
+                <img class="chat-icon" alt="" src="https://img.icons8.com/material-outlined/24/FFFFFF/chat.png" />
 
                 <div class="chat-title-1">Chat Title 3</div>
               </div>
             </div>
           </div>
-          <div class="frame88">
-            <div class="rectangle44"></div>
-            <div class="frame-parent12">
-              <div class="frame-parent13">
-                <div class="frame89">
+          <div class="chat-window">
+            <div class="chat-window-inner">
+              <div class="chat-scroll">
+                <div class="bot-message">
                   <img
-                    class="image-11-icon2"
+                    class="bot-message-pic"
                     alt=""
-                    src="./public/image-111@2x.png"
+                    src="{{url_for('static', filename='BrainBrain.png')}}"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -69,11 +80,11 @@
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="frame90">
+                <div class="user-message">
                   <img
-                    class="image-10-icon"
+                    class="user-icon"
                     alt=""
-                    src="./public/image-11@2x.png"
+                    src="https://img.icons8.com/ios-filled/100/FFFFFF/user-male-circle.png"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -82,11 +93,11 @@
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="frame91">
+                <div class="bot-message">
                   <img
-                    class="image-11-icon2"
+                    class="bot-message-pic"
                     alt=""
-                    src="./public/image-111@2x.png"
+                    src="{{url_for('static', filename='BrainBrain.png')}}"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -95,11 +106,11 @@
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="frame90">
+                <div class="user-message">
                   <img
-                    class="image-10-icon"
+                    class="user-icon"
                     alt=""
-                    src="./public/image-11@2x.png"
+                    src="https://img.icons8.com/ios-filled/100/FFFFFF/user-male-circle.png"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -108,11 +119,11 @@
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="frame91">
+                <div class="bot-message">
                   <img
-                    class="image-11-icon2"
+                    class="bot-message-pic"
                     alt=""
-                    src="./public/image-111@2x.png"
+                    src="{{url_for('static', filename='BrainBrain.png')}}"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -121,11 +132,11 @@
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="frame90">
+                <div class="user-message">
                   <img
-                    class="image-10-icon"
+                    class="user-icon"
                     alt=""
-                    src="./public/image-11@2x.png"
+                    src="https://img.icons8.com/ios-filled/100/FFFFFF/user-male-circle.png"
                   />
 
                   <div class="generating-innovative-ideas">
@@ -135,33 +146,15 @@
                   </div>
                 </div>
               </div>
-              <div class="frame95">
-                <div class="ask-your-brain">Ask Your Brain a Question</div>
-                <div class="frame96">
-                  <div class="rectangle45"></div>
+              <div class="chat-bottom">
+              <input type="text" id="chat-box" name="chat-box-message" placeholder="Ask Your Brain a Question">
+                <div class="send-button">
                   <div class="send">Send</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="image-11-container">
-        <img class="image-10-icon" alt="" src="./public/image-11@2x.png" />
-
-        <b class="secondbrain2">SecondBrain</b>
-        <div class="frame97">
-          <div class="frame98">
-            <div class="create1">Create</div>
-          </div>
-          <div class="frame99">
-            <div href="{{ url_for('chat') }}"class="create1">Ask</div>
-          </div>
-          <div class="frame100">
-            <a href="{{ url_for('notes') }}" class="create1">View</a>
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>

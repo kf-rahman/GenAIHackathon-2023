@@ -9,7 +9,9 @@ header {
   width: 100%;
   height: 100px;
   overflow: hidden;
-  z-index: 3; }
+  z-index: 3;
+}
+
 #logo {
   float: left;
   width: 100px;
@@ -21,15 +23,14 @@ header {
   text-indent: -9999px;
   position: relative;
   z-index: 2;
-  -webkit-transition: opacity 0.41s linear;
-  -moz-transition: opacity 0.41s linear;
-  -o-transition: opacity 0.41s linear;
-  transition: opacity 0.41s linear; }
-  
-  #logo:hover {
-  background-image: url("BrainBrain.png"), radial-gradient( rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
+}
+
+#logo:hover {
+  background-image: url("BrainBrain.png"), radial-gradient(rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
   background-position: left bottom;
-  background-repeat: no-repeat;}
+  background-repeat: no-repeat;
+}
+
 
 header nav ul {
   z-index: 2;
@@ -44,52 +45,57 @@ header nav ul {
   margin: 0;
   padding: 0;
   float: right;
-  text-align: right; }
-  
-  header nav ul li {
-    display: inline;
-    padding: 0; }
-    
-    header nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-family: DINWebPro-Bold;
-      text-transform: uppercase;
-      font-size: 1.4375em;
-      letter-spacing: 0.1em;
-      display: inline-block;
-      position: relative;
-      margin-left: 20px;
-      font-weight: normal;
-      -webkit-transition: color 1s;
-      -moz-transition: color 1s;
-      -o-transition: color 1s;
-      transition: color 1s; }
-      
-      header nav ul li a:hover {
-        color: #d99e00; }
-      
-      header nav ul li a.active {
-        color: #d99e00; }
+  text-align: right;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: DINWebPro-Bold;
+  text-transform: uppercase;
+  font-size: 1.4375em;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  font-weight: normal;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+header nav ul li a:hover {
+  color: #f531ff;
+}
+
+header nav ul li a.active {
+  color: #f531ff;
+}
 
 .second-brain {
-  background: linear-gradient(
-    89.95deg,
-    #be4c45 4.02%,
-    #e13cd0 28.92%,
-    #6d01b7 50%,
-    #242ade 70.68%,
-    #43f1f6 94.78%
-  );
+  background: linear-gradient(89.95deg,
+      #be4c45 4.02%,
+      #e13cd0 28.92%,
+      #6d01b7 50%,
+      #242ade 70.68%,
+      #43f1f6 94.78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .unleash-your-minds-container {
   flex: 1;
   position: relative;
   line-height: 110%;
   font-weight: 600;
 }
+
 .unleash-your-minds-potential-wrapper {
   align-self: stretch;
   display: flex;
@@ -98,6 +104,7 @@ header nav ul {
   justify-content: flex-start;
   padding: 0 80px;
 }
+
 .sign-in-with {
   position: relative;
   line-height: 20px;
@@ -129,13 +136,15 @@ header nav ul {
   position: relative;
   background-color: var(--color-black);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 100px);
+  top: 100px;
   overflow: hidden;
   text-align: center;
   font-size: 65px;
   color: var(--color-white);
   font-family: var(--font-darker-grotesque);
 }
+
 .full-logo {
   left: 5%;
   float: left;
@@ -146,26 +155,29 @@ header nav ul {
   position: absolute;
   height: 100%;
 }
+
 .full-single-column {
-  padding-top: 140px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
-  height: 902px;
   gap: 60px;
 }
+
 #big-logo {
   position: relative;
   width: 473px;
   height: 351px;
   object-fit: cover;
 }
+
 #big-logo:hover {
-  background-image: url("BrainBrain.png"), radial-gradient( rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
+  background-image: url("BrainBrain.png"), radial-gradient(rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
   background-position: left bottom;
-  background-repeat: no-repeat;}
+  background-repeat: no-repeat;
+}
 
 .login-buttons {
   display: flex;
@@ -177,6 +189,7 @@ header nav ul {
   font-size: var(--font-size-xl);
   font-family: var(--font-work-sans);
 }
+
 #login-button {
   border-radius: var(--br-781xl);
   background-color: rgba(255, 255, 255, 0.25);
@@ -195,7 +208,13 @@ header nav ul {
   flex-shrink: 0;
   color: var(--color-white);
   text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
+
 #login-button:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.25); }
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+}
