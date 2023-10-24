@@ -1,67 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page.css') }}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Darker Grotesque:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Turret Road:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="full-logo">
-          <a href="#" id="logo">SecondBrain</a>
-          <b class="secondbrain1">SecondBrain</b>
-        </div>
-          <ul>
-              <li>
-                  <a href="/chat">Sign Up</a>
-              </li>
-              <li>
-                  <a href="/chat">LogIn</a>
-              </li>
-          </ul>
-      </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='landing_page.css') }}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Darker Grotesque:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Turret Road:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="glow-top-left"></div>
+  <div class="glow-bottom-right"></div>
+  <header>
+    <nav>
+      <div class="full-logo">
+        <a href="#" id="logo">SecondBrain</a>
+        <b class="secondbrain1">SecondBrain</b>
+      </div>
+      <ul>
+        <li>
+          <a href="/chat">Sign Up</a>
+        </li>
+        <li>
+          <a href="/chat">LogIn</a>
+        </li>
+      </ul>
+    </nav>
   </header>
-    <div class="main-container">
-        <div class="full-single-column">
-          <img id="big-logo" alt="" src="{{url_for('static', filename='BrainBrain.png')}}" />
-
-          <div class="unleash-your-minds-potential-wrapper">
-            <div class="unleash-your-minds-container">
-              <span>Unleash Your Mind's Potential with </span>
-              <span class="second-brain">Second Brain</span>
-              <span>: Your AI-Powered Note-Taking Companion!</span>
-            </div>
-          </div>
-          <div class="login-buttons">
-            <a href="/chat" id="login-button">
-              <div class="sign-in-with">Sign in with Microsoft</div>
-              <img class="co-logo" src="https://img.icons8.com/color/48/microsoft.png" alt="microsoft" />
-            </a>
-            <a href="/chat" id="login-button">
-              <div class="sign-in-with">Sign in with Google</div>
-              <img class="co-logo" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" />
-            </a>
-          </div>
+  <div class="main-container">
+    <div class="full-single-column">
+      <div class="big-logo">
+        <img id="big-logo-img" alt="" src="{{url_for('static', filename='BrainBrain.png')}}" />
+      </div>
+      <div class="unleash-your-minds-potential-wrapper">
+        <div class="unleash-your-minds-container">
+          <span>Unleash Your Mind's Potential with </span>
+          <span class="second-brain">Second Brain</span>
+          <span>: Your AI-Powered Note-Taking Companion!</span>
         </div>
       </div>
-  </body>
+      <div class="login-buttons">
+        <a href="/chat" id="login-button">
+          <div class="sign-in-with">Sign in with Microsoft</div>
+          <img class="co-logo" src="https://img.icons8.com/color/48/microsoft.png" alt="microsoft" />
+        </a>
+        <a href="/chat" id="login-button">
+          <div class="sign-in-with">Sign in with Google</div>
+          <img class="co-logo" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" />
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
