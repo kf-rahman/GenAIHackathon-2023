@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
     <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}" />
@@ -118,10 +120,6 @@
                     creative endeavor. AI tools can help spark inspiration by
                     analyzing vast amounts of data
                   </div>
-                      <form class="msger-inputarea">
-      <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
-      <button type="submit" class="msger-send-btn">Send</button>
-    </form>
                 </div>
                 <div class="bot-message">
                   <img
@@ -150,15 +148,100 @@
                   </div>
                 </div>
               </div>
-              <div class="chat-bottom">
-              <input type="text" id="chat-box" name="chat-box-message" placeholder="Ask Your Brain a Question">
-                <div class="send-button">
-                  <div class="send">Send</div>
+
+              <div class="msg-container">
+                <div class="msg left-msg">
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Chatbot</div>
+                    <div class="msg-info-time">12:45</div>
+                  </div>
+
+                  <div class="user-message">
+                    Hi, welcome to ChatBot! Go ahead and send me a message. 😄
+                  </div>
                 </div>
               </div>
+
+            </div>
+
+
+
+              <form class="chat-bottom">
+              <input type="text" class = "chat-box" id="chat-box" name="chat-box-message" placeholder="Ask Your Brain a Question">
+                <div class="send-button">
+                  <button type="submit" class="msger-send-btn">Send</button>
+                </div>
+              </form>
+
+
+
+
             </div>
           </div>
         </div>
     </div>
+      <script>
+
+    const msgerForm = get(".chat-bottom");
+    const msgerInput = get(".chat-box");
+    const msgerChat = get(".msg-container");
+
+
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_NAME = " ChatBot";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name,side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+    </div>
+
+    <div class="user-message">${text}</div>
+  </div>
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    // Bot Response
+
+    function botResponse(rawText) {
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, "left", msgText);
+      });
+    }
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+
+
+
+  </script>
   </body>
 </html>

@@ -1,107 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="en">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Turret Road:wght@700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="ask">
-      <div class="ask-child"></div>
-      <div class="ask-item"></div>
-      <div class="ask-inner">
-        <div class="frame-parent">
-          <div class="frame">
-            <div class="rectangle"></div>
-            <div class="frame-group">
-              <div class="frame1">
-                <div class="new-chat">+ NEW CHAT</div>
-              </div>
-              <div class="frame2">
-                <img class="frame-icon" alt="" src="./public/frame.svg" />
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-                <div class="chat-title-1">Chat Title 1</div>
-              </div>
-              <div class="frame2">
-                <img class="frame-icon" alt="" src="./public/frame.svg" />
-
-                <div class="chat-title-1">Chat Title 2</div>
-              </div>
-              <div class="frame2">
-                <img class="frame-icon" alt="" src="./public/frame.svg" />
-
-                <div class="chat-title-1">Chat Title 3</div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="frame5">
-            <div class="rectangle1"></div>
-            <div class="frame-container" id="frameContainer8">
-              <div class="frame-child"></div>
-              <input type="text" class="frame6" id="textInput" placeholder="Ask your Brain">
-              <div class="frame7">
-              <div class="rectangle2"></div>
-              <button type="submit" class="send">Send</button>
-              </div>
-            </div>
-            </div>
-          </div>
-
-
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-bug"></i> Chatbot <i class="fas fa-bug"></i>
       </div>
-      </div>
-      <div class="image-11-parent">
-        <img
-          class="image-11-icon"
-          alt=""
-          src="./public/image-11@2x.png"
-          id="image11"
-        />
+    </header>
 
-        <b class="secondbrain">SecondBrain</b>
-        <div class="frame8">
-          <div class="frame9">
-            <div class="create">Create</div>
+    <main class="msger-chat">
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">Chatbot</div>
+            <div class="msg-info-time">12:45</div>
           </div>
-          <div class="frame10">
-            <div class="create">Ask</div>
-          </div>
-          <div class="frame9">
-            <div class="create">View</div>
+
+          <div class="msg-text">
+            Hi, welcome to ChatBot! Go ahead and send me a message. 😄
           </div>
         </div>
       </div>
-    </div>
 
+    </main>
 
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
 
-
-
-
-
-
-    <script>
-
-    const msgerForm = get(".frame6");
-    const msgerInput = get(".textInput");
-    const msgerChat = get(".ask");
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
 
 
     // Icons made by Freepik from www.flaticon.com
-    const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
-    const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
     const BOT_NAME = "    ChatBot";
     const PERSON_NAME = "You";
 
@@ -111,21 +62,18 @@
       const msgText = msgerInput.value;
       if (!msgText) return;
 
-      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      appendMessage(PERSON_NAME, "right", msgText);
       msgerInput.value = "";
-      botResponse(msgText);
     });
 
-    function appendMessage(name, img, side, text) {
+    function appendMessage(name, side, text) {
       //   Simple solution for small apps
       const msgHTML = `
 <div class="msg ${side}-msg">
-  <div class="msg-img" style="background-image: url(${img})"></div>
 
   <div class="msg-bubble">
     <div class="msg-info">
       <div class="msg-info-name">${name}</div>
-      <div class="msg-info-time">${formatDate(new Date())}</div>
     </div>
 
     <div class="msg-text">${text}</div>
@@ -137,34 +85,16 @@
       msgerChat.scrollTop += 500;
     }
 
-    function botResponse(rawText) {
-
-      // Bot Response
-      $.get("/get", { msg: rawText }).done(function (data) {
-        console.log(rawText);
-        console.log(data);
-        const msgText = data;
-        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-
-      });
-
-    }
-
 
     // Utils
     function get(selector, root = document) {
       return root.querySelector(selector);
     }
 
-    function formatDate(date) {
-      const h = "0" + date.getHours();
-      const m = "0" + date.getMinutes();
-
-      return `${h.slice(-2)}:${m.slice(-2)}`;
-    }
-
 
 
   </script>
-  </body>
+
+</body>
+
 </html>
