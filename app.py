@@ -11,7 +11,7 @@ headers = {"Authorization": "Bearer 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"}
 #syncing code base
 app = Flask(__name__)
 
-@app.route('/home')
+@app.route('/')
 def landing_page():
     return render_template('landing_page.html')
 
