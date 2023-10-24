@@ -68,28 +68,28 @@
           </div>
           <div class="chat-window">
             <div class="chat-window-inner">
-              <div class="chat-scroll">
-                <div class="bot-message">
+              <div class="msg-container">
+                <div class="msg-left-msg">
                   <img
                     class="bot-message-pic"
                     alt=""
                     src="{{url_for('static', filename='BrainBrain.png')}}"
                   />
 
-                  <div class="generating-innovative-ideas">
+                  <div class="msg-bubble">
                     Generating innovative ideas is a crucial aspect of any
                     creative endeavor. AI tools can help spark inspiration by
                     analyzing vast amounts of data
                   </div>
                 </div>
-                <div class="user-message">
+                <div class="msg-right-msg">
                   <img
                     class="user-icon"
                     alt=""
                     src="https://img.icons8.com/ios-filled/100/FFFFFF/user-male-circle.png"
                   />
 
-                  <div class="generating-innovative-ideas">
+                  <div class="msg-bubble">
                     Generating innovative ideas is a crucial aspect of any
                     creative endeavor. AI tools can help spark inspiration by
                     analyzing vast amounts of data
@@ -97,22 +97,6 @@
                 </div>
                 
               </div>
-
-              <div class="msg-container">
-                <div class="msg left-msg">
-                <div class="msg-bubble">
-                  <div class="msg-info">
-                    <div class="msg-info-name">Chatbot</div>
-                    <div class="msg-info-time">12:45</div>
-                  </div>
-
-                  <div class="user-message">
-                    Hi, welcome to ChatBot! Go ahead and send me a message. 😄
-                  </div>
-                </div>
-              </div>
-
-            </div>
 
 
 
@@ -139,8 +123,10 @@
 
 
     // Icons made by Freepik from www.flaticon.com
-    const BOT_NAME = " ChatBot";
-    const PERSON_NAME = "You";
+
+
+    const BOT_NAME = " {{url_for('static', filename='BrainBrain.png')}}";
+    const PERSON_NAME = "{{url_for('static', filename='BrainBrain.png')}}";
 
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();
@@ -156,12 +142,12 @@
     function appendMessage(name,side, text) {
       //   Simple solution for small apps
       const msgHTML = `
-<div class="msg ${side}-msg">
+<div class="msg-${side}-msg">
+<img
+         class="msg-info-name"
+          alt=""
+          src=${name}/>
   <div class="msg-bubble">
-    <div class="msg-info">
-      <div class="msg-info-name">${name}</div>
-    </div>
-
     <div class="user-message">${text}</div>
   </div>
 </div>
