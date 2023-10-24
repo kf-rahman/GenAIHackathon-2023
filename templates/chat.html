@@ -24,12 +24,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap"
     />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   </head>
   <body>
     <header>
       <nav>
         <div class="full-logo">
-          <a href="/" id="logo">SecondBrain</a>
+          <div class="small-logo">
+            <a href="/" id="logo">SecondBrain</a>
+          </div>
           <b class="secondbrain1">SecondBrain</b>
         </div>
           <ul>
@@ -71,28 +74,13 @@
               <div class="msg-container">
                 <div class="msg-left-msg">
                   <img
-                    class="bot-message-pic"
+                    class="msg-info-name"
                     alt=""
                     src="{{url_for('static', filename='BrainBrain.png')}}"
                   />
 
                   <div class="msg-bubble">
-                    Generating innovative ideas is a crucial aspect of any
-                    creative endeavor. AI tools can help spark inspiration by
-                    analyzing vast amounts of data
-                  </div>
-                </div>
-                <div class="msg-right-msg">
-                  <img
-                    class="user-icon"
-                    alt=""
-                    src="https://img.icons8.com/ios-filled/100/FFFFFF/user-male-circle.png"
-                  />
-
-                  <div class="msg-bubble">
-                    Generating innovative ideas is a crucial aspect of any
-                    creative endeavor. AI tools can help spark inspiration by
-                    analyzing vast amounts of data
+                    Hi I'm SecondBrain, your AI note taking companion. How can I help you?
                   </div>
                 </div>
                 
@@ -101,10 +89,14 @@
 
 
               <form class="chat-bottom">
-              <input type="text" class = "chat-box" id="chat-box" name="chat-box-message" placeholder="Ask Your Brain a Question">
-                <div class="send-button">
-                  <button type="submit" class="msger-send-btn">Send</button>
-                </div>
+              <input type="text" class = "chat-box" id="chat-box" name="chat-box-message" placeholder="Ask Your Brain a Question" autocomplete="off">
+                  <button type="submit" class="msger-send-btn">
+                    <img
+                    class="msg-send-icon"
+                    alt=""
+                    src="https://img.icons8.com/material-rounded/48/FFFFFF/sent.png"
+                  />
+                  </button>
               </form>
 
 
@@ -126,7 +118,7 @@
 
 
     const BOT_NAME = " {{url_for('static', filename='BrainBrain.png')}}";
-    const PERSON_NAME = "{{url_for('static', filename='BrainBrain.png')}}";
+    const PERSON_NAME = "{{url_for('static', filename='User.png')}}";
 
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();

@@ -12,6 +12,36 @@ header {
   z-index: 3;
 }
 
+.small-logo {
+  width: 100px;
+  height: 70px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-indent: -9999px;
+  position: relative;
+  z-index: 2;
+}
+
+.small-logo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.small-logo:hover::before {
+  opacity: 1;
+}
+
 #logo {
   float: left;
   width: 100px;
@@ -23,12 +53,6 @@ header {
   text-indent: -9999px;
   position: relative;
   z-index: 2;
-}
-
-#logo:hover {
-  background-image: url("BrainBrain.png"), radial-gradient(rgba(255, 255, 255, 0.916) 30%, rgba(255, 255, 255, 0) 70%);
-  background-position: left bottom;
-  background-repeat: no-repeat;
 }
 
 
