@@ -50,6 +50,12 @@
           <div class="sidebar">
             <div class="sidebar-inner">
               <div class="new-chat-button">
+
+                <form id="file-upload-form" method="post">
+                  <input type="file" id="file-upload" name="fileUpload" />
+                  <button type="submit">Upload File</button>
+                  </form>
+
                 <div class="new-chat">+ NEW CHAT</div>
               </div>
               <div class="chat-select-button">
@@ -86,7 +92,6 @@
                 
               </div>
 
-              <input type="file" id="actual-btn"/>
 
 
               <form class="chat-bottom">
@@ -167,6 +172,26 @@
       return root.querySelector(selector);
     }
 
+
+    document.getElementById('file-upload-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var fileInput = document.getElementById('file-upload');
+  var file = fileInput.files[0];
+
+  // Create a FormData object and append the file
+  var formData = new FormData();
+  formData.append('file', file);
+
+  // Send the file using fetch to your server-side script
+  fetch('/upload-to-azure', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+});
 
 
 

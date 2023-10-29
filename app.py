@@ -28,6 +28,14 @@ def notes():
 def chat():
     return render_template('chat.html')
 
+
+
+@app.route('/upload-to-azure', methods=['POST'])
+def upload_to_azure():
+    file = request.files['file']
+    print(file.filename)
+    return file.filename
+
 def chatbot_response(msg):
     response = requests.post(API_URL, headers=headers, json=msg)
     print(response.json())
@@ -50,5 +58,6 @@ def get_bot_response():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
+
 
